@@ -1,0 +1,67 @@
+/* RESETING ALL SPACES IN THE PROJECT */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ADDING A FONT FAMILY AND BACKGROUND COLOR TO THE BODY */
+body {
+  background-color: crimson;
+  font-family: sans-serif;
+}
+/* GIVING THE MAIN ACCORDING BODY A WIDTH AND A MARGIN */
+#Accordion {
+  width: 600px;
+  margin: 100px;
+}
+/* TARGETTINGA AND STYLING THE LI */
+#Accordion li {
+  list-style-type: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: white;
+  padding: 12px;
+}
+
+/* TAGETING THE LABEL AND SPACING THE MAIN TEXT FROM THE SPAN */
+#Accordion li label{
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: dodgerblue;
+}
+
+/* RATATING THE DROPPED DOWN BUTTON */
+#Accordion li label span {
+  transform: rotate(90deg);
+  font-size: 22px;
+  color: dodgerblue;
+}
+
+/* HIDDING THE RADIO BUTTON FROM THE DOM */
+#Accordion li input {
+  display: none;
+}
+
+/* STYLING THE CONTENT BUT REDUCING THE HEIGHT AND OVERFLOW TO MAKE THEM SHOW ONLY ONCHECK */
+.content {
+  padding: 0 12px;
+  line-height: 25px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+/* ADDING SOMETHING LIKE AN EVENT LISTENER TO CHECK AND INCREASE THE CONTENT WHEN CHECKED */
+#Accordion li label + input:checked + .content {
+  max-height: 400px;
+}
+
+/* TRYING TO SEE IF THE DROPDOWN BUTTON CAN BE CHANGE WHEN NOT CHECKED */
+/* #Accordion li label + input:checked  span { */
+  /* transform: rotate(-90deg); */
+/* } */
