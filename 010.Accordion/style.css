@@ -62,6 +62,6 @@ body {
 }
 
 /* TRYING TO SEE IF THE DROPDOWN BUTTON CAN BE CHANGE WHEN NOT CHECKED */
-/* #Accordion li label + input:checked  span { */
-  /* transform: rotate(-90deg); */
-/* } */
+#Accordion li label + input:checked ~ span {
+  transform: rotate(-90deg);
+}
