@@ -1,0 +1,67 @@
+/* RESETING ALL MARGING AND PADDING PROPERTIES TO 0 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STYLING THE BODY ELEMENT */
+body {
+  background: #00008bcb ;
+}
+
+/* STYLING THE WRAPPER SECTION*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* STYLING THE LOADER DIV */
+.wrapper .loader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* STYLING THE LOADING DIVS */
+.loader .loading {
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 0 10px;
+
+  animation: load 0.8s ease infinite ;
+}
+
+/* STYLING THE LOADER INDIVIDUALY USING THE SECOND CLASSES */
+.loader .loading.one {
+  animation-delay: 0.2s;
+}
+
+.loader .loading.two {
+  animation-delay: 0.3s;
+}
+
+.loader .loading.three {
+  animation-delay: 0.4s;
+}
+
+.loader .loading.four {
+  animation-delay: 0.5s;
+}
+
+/* CREATING THE GENERAL ANIMATION */
+@keyframes load {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+  }
+}
