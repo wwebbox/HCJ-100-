@@ -1,0 +1,50 @@
+/* Providing a box model reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Styling the container to make sure that the buttons is centered perfectly */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(16, 16, 16);
+  font-family: sans-serif;
+}
+
+/* Styling the anchor button */
+a {
+  text-decoration: none;
+  color: antiquewhite;
+  border: 2px solid antiquewhite;
+  padding: 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+/* Adding a before selector to futher style the button for interactivity */
+a::before {
+  content: "DOWNNLOAD";
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: antiquewhite;
+  transform: translateY(-100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+a:hover::before {
+  transform: translateY(0);
+}
